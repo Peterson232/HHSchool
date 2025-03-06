@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title%}Edit Student{% endblock %}
+{% block content %}
+<!--<table class="table">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--    <th>NAME</th>-->
+<!--    <th>AGE</th>-->
+<!--    <th>GENDER</th>-->
+<!--    <th>COURSE</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--<tbody>-->
+<!--{% for student in students %}-->
+<!--    <tr>-->
+<!--        <td>{{ student.name }}</td>-->
+<!--        <td>{{ student.age }}</td>-->
+<!--        <td>{{ student.gender }}</td>-->
+<!--        <td>{{ student.course }}</td>-->
+<!--        <td><a href="{% url 'editstudent' student.id %}" class="btn btn success" type="button">Edit Student</a></td>-->
+<!--        <td><a href="{% url 'deletestudent' student.id%}" type="button" class="btn btn-danger">DELETE STUDENT</a></td>-->
+<!--    </tr>-->
+
+<!--{% endfor %}-->
+<!--</tbody>-->
+<!--</table>-->
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">SAVE CHANGES</button>
+
+</form>
+{% endblock %}
